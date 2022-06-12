@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTAFOLIO</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<style>@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: teal;
+    color: #fff;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+  }
+  .brand {
+    margin-top: -7px;
+  }
+  .brand span {
+    color: #1beace;
+  }
+  .menu {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+  }
+  .menu li {
+    list-style: none;
+  }
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  .menu li:hover a {
+    background-color: #024d43;
+    color: #191c32;
+  }
+  
+  .menu .active {
+    color: #ffffff;
+  }
+  
+  .menu li a:hover {
+    color: #66e7c8;
+  }
+  
+  .main {
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2em;
+  }
+  
+  h1 {
+    font-size: 3em;
+  }
+  
+  .info-content span {
+    color: #1beace;
+  }
+  
+  .download-cv {
+    padding: 10px 20px;
+    background-color: lime;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
+    -moz-box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
+    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
+  }
+  
+  .download-cv:hover {
+    background-color: azure;
+    box-shadow: none;
+  }
+  
+  .main img {
+    border: 9px solid #71e7ba;
+    width: 350px;
+    height: 470px;
+    z-index: 1;
+  }
+  
+  .about {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100vw;
+    align-items: center;
+  }
+  
+  .about img {
+    border: 9px solid lime;
+    width: 100%;
+    grid-column: 1/5;
+  }
+  
+  .about-info {
+    grid-column: 5/10;
+    padding: 3em;
+  }
+  
+  .about-info h2 {
+    font-size: 3em;
+    color: lime;
+  }
+  
+  .divider {
+    height: 4px;
+    width: 200px;
+    background-color: #5ee583;
+    margin-top: 5px;
+    margin-bottom: 2em;
+  }
+  
+  .about p {
+    margin-bottom: 1em;
+  }
+  
+  .portfolio,
+  .contact-section {
+    width: 100vw;
+    background-color: #191c32;
+    color: #fff;
+  }
+  
+  .portfolio-heading {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .portfolio-heading h2,
+  .contact-heading h2 {
+    font-size: 2.5em;
+    color: #fff;
+  }
+  
+  .portfolio .container {
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 300px;
+    background-color: #2b3058;
+    margin: 1em;
+  }
+  
+  .card__img {
+    width: 100%;
+    height: 150px;
+    background-image: url(https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1623454406i/58317413.jpg);
+    background-size: cover;
+  }
+  
+  .card__title {
+    padding: 20px;
+  }
+  
+  .card__proyect-links {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card__proyect-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .card__proyect-links i {
+    font-size: 1.5em;
+  }
+  
+  .button-content {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+  }
+  
+  .project-details-button a {
+    text-decoration: none;
+    color: #191c32;
+  }
+  
+  .contact-section {
+    padding: 3em;
+  }
+  
+  .container-contact {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-section img {
+    width: 750px;
+    height: 700px;
+    bottom: 0px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 2em;
+  }
+  .form-group textarea {
+    height: 150px;
+    padding: 1.5em;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .form-group .input {
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .form-group .btn-submit {
+    padding: 10px 20px;
+    margin: 1em;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    background-color: lime;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    padding: 2em;
+    background-color: lime;
+  }
+  
+  .footer-content h2 {
+    font-size: 3em;
+  }
+  
+  .footer-content h5 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .sotial-networks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+  }
+  
+  .sotial-networks i {
+    font-size: 1.5em;
+  }
+  
+  .portfolio,
+  .contact-section {
+    width: 100vw;
+    background-color: salmon;
+    color: #fff;
+  }
+  
+  .portfolio-heading {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3em;
+  }
+  
+  .portfolio-heading h2,
+  .contact-heading h2 {
+    font-size: 2.5em;
+    color: #fff;
+  }
+  
+  .portfolio .container {
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 400px;
+    background-color: teal;
+    margin: 1em;
+  }
+  
+  .card__img {
+    width: 100%;
+    height: 150px;
+    background-image: url(https://www.lavanguardia.com/files/image_449_220/uploads/2020/03/17/5fa9056fcebd9.jpeg);
+    background-size: cover;
+  }
+  
+  .card__title {
+    padding: 20px;
+  }
+  
+  .card__proyect-links {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card__proyect-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .card__proyect-links i {
+    font-size: 1.5em;
+  }
+  
+  .button-content {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+  }
+  
+  .project-details-button a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .contact-section {
+    padding: 3em;
+  }
+  
+  .container-contact {
+    margin: 0 auto;
+    margin-top: 10em;
+  }
+  
+  .contact-section img {
+    border: 9px solid #71e7ba;
+    width: 700px;
+    height: 600px;
+    bottom: 0px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 2em;
+  }
+  .form-group textarea {
+    height: 150px;
+    padding: 1.5em;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .form-group .input {
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .form-group .btn-submit {
+    padding: 10px 20px;
+    margin: 1em;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    background-color: ;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    padding: 2em;
+    background-color: teal;
+  }
+  
+  .footer-content h2 {
+    font-size: 3em;
+  }
+  
+  .footer-content h5 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .sotial-networks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+  }
+  
+  .sotial-networks i {
+    font-size: 1.5em;
+  }</style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar">
+        <div class="brand">
+          <h2>Andrea<span>Morales</span></h2>
+        </div>
+        <ul class="menu">
+          <li><a href="#" class="active">Inicio</a></li>
+          <li><a href="#">¿Quien Soy?</a></li>
+          <li><a href="#">Preferencias</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="info-content">
+        <h1>Soy <span>Andrea</span> Morales</h1>
+        <p>Este es mi portafolio virtual, se mostraran mis gustos, ¿quien soy? poco mas,algunos de mis libros, peliculas, gustos musicales favoritos y ligeramente un poco de mi vida personal. </p>
+      </div>
+      <img src="https://i.pinimg.com/564x/a2/8f/84/a28f84bce1eee8920b11ce6237e9ed40.jpg" alt="">
+    </main>
+  </div>
+  <div class="about">
+    <img src="https://i.pinimg.com/564x/e0/8d/14/e08d14c3d4e5d802fadc9cb9d1d99de7.jpg" alt="">
+    <div class="about-info">
+      <h2>Acerca de Mi</h2>
+      <div class="divider"></div>
+      <p>Soy Andrea, tengo 17 años, estoy en ultimo año estudiando informatica, mi familia es de 5 integrantes contandome a mi, son 1 hermana y 1 un hermano. Tengo a veces gustos muy raros o muy basicos es dependiendo del dia, soy partidaria de estar sola o bueno me gusta el silencio, soy una persona bastante impuntual tengo que reconocerlo, suelo tener muy poca paciencia en ciertas situaciones pero en otras soy demasiado paciente tipo un 50/50, me cuesta llevarme con personas de mi misma edad asi que prefiero hablar con señor@s, tienen cosas mas interesantes que decir, no me caen bien la mayor parte de las personas a excepcion de mis amigos (auque hasta ellos no los aguanto a veces y eso es todo creo.</p>
+      <p>En realidad no es todo, me gustan las vacas o mas que todo los animales menos los gatos peludos, los sapos y las cucarachas, me fascina la comida pero estamos reduciendo eso para estar mamadisima, me encanta leer, escuchar musica, ver series, no me gusta salir muy seguido y menos a lugares con mucha gente porque me estresa, no me gustan mucho los niños y soy team frio. </p>
+      <button class="download-cv">Read more</button>
+    </div>
+  </div>
+  <div class="portfolio">
+    <div class="portfolio-heading">
+      <h2>Preferencias</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="card__img">
+        </div>
+        <div class="card__title">
+          <h2>Libros</h2>
+        </div>
+        <div class="card__proyect-links">
+          <a href="">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="">
+            <i class="fas fa-globe-asia"></i>
+          </a>
+          <a href="">
+            <i class="fas fa-code"></i>
+          </a>
+        </div>
+        <div class="button-content">
+          <button class="project-details-button download-cv">
+            <a href="#">Mas</a>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img">
+        </div>
+        <div class="card__title">
+          <h2>Musica</h2>
+        </div>
+        <div class="card__proyect-links">
+          <a href="#">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="">
+            <i class="fas fa-globe-asia"></i>
+          </a>
+          <a href="">
+            <i class="fas fa-code"></i>
+          </a>
+        </div>
+        <div class="button-content">
+          <button class="project-details-button download-cv">
+            <a href="#">Mas</a>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img">
+        </div>
+        <div class="card__title">
+          <h2>Series</h2>
+        </div>
+        <div class="card__proyect-links">
+          <a href="#">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="">
+            <i class="fas fa-globe-asia"></i>
+          </a>
+          <a href="">
+            <i class="fas fa-code"></i>
+          </a>
+        </div>
+        <div class="button-content">
+          <button class="project-details-button download-cv">
+            <a href="#">Mas</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-heading">
+      <h2>Mantente en contacto</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="container-contact">
+      <img src="https://i.pinimg.com/236x/60/2e/84/602e84630e4b47d2c2e084b5e4fb3ba8.jpg" alt="">
+      <div class="contact-form">
+        <h3>Send me a message</h3>
+        <form class="form-group">
+          <input type="text" placeholder="Name" class="input">
+          <input type="email" placeholder="Email" class="input">
+          <textarea name="message" placeholder="Place your message here..."></textarea>
+          <button type="submit" class="btn-submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>Andrea Morales</h2>
+      <h5>Este Fue mi Portafolio Personal</h5>
+    </div>
+    <div class="sotial-networks">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-twitter-square"></i>
+    </div>
+  </footer>
+</body>
+</html>
